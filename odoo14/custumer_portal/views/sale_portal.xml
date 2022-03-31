@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="custom_my_cotation" inherit_id="sale.portal_my_quotations" >
+        <xpath expr="//th" position="after">
+            <th class="text-right">Cliente</th>
+        </xpath>
+        <xpath expr="//td" position="after">
+            <td class="text-right"><span t-field="quotation.partner_id"/></td>
+        </xpath>
+    </template>
+    
+    <template id="custom_my_orders" inherit_id="sale.portal_my_orders" >
+        <xpath expr="//th" position="after">
+            <th class="text-right">Cliente</th> 
+        </xpath>
+        <xpath expr="//td" position="after">
+            <td class="text-right"><span t-field="order.partner_id"/></td>
+        </xpath>
+    </template>
+</odoo>
